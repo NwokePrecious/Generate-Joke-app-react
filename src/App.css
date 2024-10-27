@@ -1,0 +1,103 @@
+/* App.css */
+.app-container {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.language-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#dropdown-basic-button {
+  background-color: grey;
+  border: none;
+  margin-bottom: 100px;
+}
+
+.joke-layout {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+}
+
+.joke-box {
+  background-color: white;
+  border: 1px solid white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make it responsive */
+}
+
+.punchline-box {
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 5px; /* Space between joke and punchline */
+  margin-left: 500px; /* Slightly push to the right */
+  width: calc(100% - 20px); /* Adjust for left margin */
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.error-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #f8d7da;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+  padding-left: 300px; /* Adjust this for desktop */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .joke-layout {
+    align-items: center; /* Center items for smaller screens */
+  }
+
+  .joke-box {
+    width: 90%; /* Use more screen space */
+  }
+
+  .punchline-box {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    width: 90%; /* Make it full width */
+  }
+
+  .button-container {
+    margin-left: 0; /* Reset margin for smaller screens */
+    justify-content: center; /* Center buttons */
+    padding-left: 0; /* Remove left padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .joke-box,
+  .punchline-box {
+    padding: 15px; /* Reduce padding for mobile */
+  }
+
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+  }
+}
